@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Elige 9 Cursos</title>
+
+  <!-- Bootstrap para estilos prediseñados -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Ícono de pestaña del navegador -->
+  <link rel="icon" href="../IMG/logo.png" type="image/x-icon">
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="../CSS/elegircursos1.css">
+</head>
+
+<body>
+
+  <!-- Contenedor principal -->
+  <div class="container py-5">
+    <h1 class="text-center text-success fw-bold mb-4">Elige 9 Cursos</h1>
+
+    <!-- Formulario que redirige al dar clic en "Pagar Ahora" -->
+    <form id="form-cursos" action="./PAGES/datosper.html" method="get">
+      <div class="row justify-content-center">
+
+        <!-- Tarjetas de cursos individuales con checkboxes -->
+        <div class="col-md-3 curso-card"><input type="checkbox" name="curso" value="Cocina Oriental"> Cocina Oriental
+        </div>
+        <div class="col-md-3 curso-card"><input type="checkbox" name="curso" value="Panadería y Repostería"> Panadería y
+          Repostería</div>
+        <div class="col-md-3 curso-card"><input type="checkbox" name="curso" value="Cocina Saludable"> Cocina Saludable
+        </div>
+
+        <div class="col-md-3 curso-card"><input type="checkbox" name="curso" value="Matemáticas Avanzadas"> Matemáticas
+          Avanzadas</div>
+        <div class="col-md-3 curso-card"><input type="checkbox" name="curso" value="Estadística Aplicada"> Estadística
+          Aplicada</div>
+        <div class="col-md-3 curso-card"><input type="checkbox" name="curso" value="Física Moderna"> Física Moderna
+        </div>
+
+        <div class="col-md-3 curso-card"><input type="checkbox" name="curso" value="Bases de Datos"> Bases de Datos
+        </div>
+        <div class="col-md-3 curso-card"><input type="checkbox" name="curso" value="Bitcoin y Criptomonedas"> Bitcoin y
+          Criptomonedas</div>
+        <div class="col-md-3 curso-card"><input type="checkbox" name="curso" value="Programación para Principiantes">
+          Programación para Principiantes</div>
+
+        <div class="col-md-3 curso-card"><input type="checkbox" name="curso" value="Administración de Empresas">
+          Administración de Empresas</div>
+        <div class="col-md-3 curso-card"><input type="checkbox" name="curso" value="Inteligencia Emocional y Liderazgo">
+          Inteligencia Emocional y Liderazgo</div>
+        <div class="col-md-3 curso-card"><input type="checkbox" name="curso" value="Emprendimiento Digital">
+          Emprendimiento Digital</div>
+
+        <div class="col-md-3 curso-card"><input type="checkbox" name="curso" value="Dibujo"> Dibujo</div>
+        <div class="col-md-3 curso-card"><input type="checkbox" name="curso" value="Diseño Gráfico Básico"> Diseño
+          Gráfico Básico</div>
+        <div class="col-md-3 curso-card"><input type="checkbox" name="curso" value="Fotografía Creativa"> Fotografía
+          Creativa</div>
+      </div>
+
+      <!-- Botones para enviar o regresar -->
+      <div class="mt-4 text-start">
+        <button type="submit" class="btn btn-pagar">Pagar Ahora</button>
+        <button type="button" class="btn btn-secondary" onclick="window.history.back();">Regresar</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Script para limitar la selección a 9 cursos -->
+  <script>
+    const LIMITE = 9; // Número máximo permitido
+    const checkboxes = document.querySelectorAll('input[type="checkbox"][name="curso"]');
+
+    // Evento para verificar el número de cursos seleccionados
+    checkboxes.forEach(cb => {
+      cb.addEventListener('change', () => {
+        const checked = document.querySelectorAll('input[name="curso"]:checked');
+        if (checked.length > LIMITE) {
+          cb.checked = false; // Desmarca si supera el límite
+          alert('Solo puedes seleccionar ' + LIMITE + ' cursos.');
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>

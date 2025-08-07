@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Configuración básica del documento -->
+  <meta charset="UTF-8">
+  <title>Curso Emprendimiento Digital</title>
+  <!-- Ícono del sitio -->
+  <link rel="icon" href="../IMG/logo.png" type="image/x-icon">
+  <!-- Vista adaptable a dispositivos móviles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Íconos de Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- Estilos personalizados del curso -->
+  <link rel="stylesheet" href="../CSS/empredimiento.css">
+</head>
+<body>
+  <!-- Botón para volver a la lista de cursos -->
+  <div class="volver-cursos">
+    <a href="cursos.html" class="btn-volver">
+      <i class="bi bi-arrow-left-circle"></i> Volver a cursos
+    </a>
+  </div>
+
+  <!-- Tarjeta principal del curso -->
+  <div class="profile-card">
+    <!-- Encabezado del curso -->
+    <header class="header">
+      <h1>Emprendimiento Digital</h1>
+      <a href="#">www.ackcursos.mx</a>
+    </header>
+
+    <!-- Información principal del curso -->
+    <section class="info-principal">
+      <img src="../Img/digit.jpg" alt="Instructor Emprendimiento" class="imagen-curso">
+      <div class="texto-principal">
+        <p><strong>Instructor:</strong> Andrea Solano <a href="profesorempredimiento.html" class="boton-perfil">Ver perfil</a></p>
+        <p><strong>Inicio:</strong> Miércoles 11 de septiembre de 2025</p>
+        <p><strong>Modalidad:</strong> En línea en vivo</p>
+        <p><strong>Horario:</strong> 18:30 a 21:30 hrs</p>
+      </div>
+    </section>
+
+    <!-- Sección de contenido del curso con acordeón -->
+    <section class="bloque">
+      <h2>✅ Contenido</h2>
+      <div class="accordion">
+        <!-- Cada botón despliega su contenido al hacer clic -->
+        <button class="toggle">Idea y modelo de negocio ⯈</button>
+        <div class="details">
+          <ul>
+            <li>Validación del problema y solución</li>
+            <li>Canvas y Lean Startup</li>
+            <li>Producto mínimo viable (MVP)</li>
+          </ul>
+        </div>
+        <button class="toggle">Desarrollo de marca ⯈</button>
+        <div class="details">
+          <ul>
+            <li>Branding y naming</li>
+            <li>Diseño de logotipo y estilo visual</li>
+            <li>Posicionamiento digital</li>
+          </ul>
+        </div>
+        <button class="toggle">Estrategias de marketing digital ⯈</button>
+        <div class="details">
+          <ul>
+            <li>Redes sociales y contenido</li>
+            <li>Publicidad online: Google Ads y Facebook Ads</li>
+            <li>Funnel de ventas y automatización</li>
+          </ul>
+        </div>
+        <button class="toggle">Plataformas y herramientas ⯈</button>
+        <div class="details">
+          <ul>
+            <li>Herramientas de productividad</li>
+            <li>Creación de tienda online</li>
+            <li>Email marketing y CRM</li>
+          </ul>
+        </div>
+        <button class="toggle">Escalabilidad y financiamiento ⯈</button>
+        <div class="details">
+          <ul>
+            <li>Modelos escalables</li>
+            <li>Pitch para inversores</li>
+            <li>Fuentes de financiamiento</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fechas del curso -->
+    <section class="bloque">
+      <h2>📅 Fechas</h2>
+      <p>11 al 27 de septiembre (Miércoles y Viernes)</p>
+    </section>
+
+    <!-- Requisitos para tomar el curso -->
+    <section class="bloque">
+      <h2>📝 Requisitos</h2>
+      <ul>
+        <li>Ser mayor de edad</li>
+        <li>Interés en emprender o desarrollar un negocio</li>
+        <li>Conexión a internet estable</li>
+      </ul>
+    </section>
+
+    <!-- Costos del curso -->
+    <section class="bloque costos">
+      <div class="costos-flex">
+        <div class="texto-costos">
+          <h2>💰 Costos</h2>
+          <p>Total: <strong>$1,800 m.n.</strong></p>
+          <p>Pago único o mensualidades personalizadas.</p>
+          <p>10% de descuento por pronto pago — <strong>$1,620 m.n.</strong></p>
+        </div>
+        <img src="../Img/empred.jpg" alt="Costos del curso" class="imagen-costos">
+      </div>
+    </section>
+
+    <!-- Botón para adquirir el curso -->
+    <footer>
+      <a href="../Pages/datosper.html"><button>Adquirir el curso</button></a>
+    </footer>
+  </div>
+
+  <!-- Script para controlar el acordeón del contenido -->
+  <script>
+    document.querySelectorAll('.toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const panel = button.nextElementSibling;
+        const isVisible = panel.style.display === 'block';
+        // Cierra todos los paneles
+        document.querySelectorAll('.details').forEach(p => p.style.display = 'none');
+        document.querySelectorAll('.toggle').forEach(btn => {
+          btn.textContent = btn.textContent.replace('⯆', '⯈');
+        });
+        // Muestra solo el panel actual
+        if (!isVisible) {
+          panel.style.display = 'block';
+          button.textContent = button.textContent.replace('⯈', '⯆');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

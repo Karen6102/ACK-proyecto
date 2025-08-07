@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Configuración básica del documento -->
+  <meta charset="UTF-8">
+  <title>Curso Dibujo</title>
+  <link rel="icon" href="../IMG/logo.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Iconos de Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <!-- Hoja de estilos personalizada -->
+  <link rel="stylesheet" href="../CSS/dibujo.css">
+</head>
+
+<body>
+
+  <!-- Botón para volver a la página de cursos -->
+  <div class="volver-cursos">
+    <a href="cursos.html" class="btn-volver">
+      <i class="bi bi-arrow-left-circle"></i> Volver a cursos
+    </a>
+  </div>
+
+  <!-- Tarjeta del curso de dibujo -->
+  <div class="profile-card">
+
+    <!-- Encabezado con título del curso y enlace -->
+    <header class="header">
+      <h1>Dibujo</h1>
+      <a href="#">www.ackcursos.mx</a>
+    </header>
+
+    <!-- Información principal del curso -->
+    <section class="info-principal">
+      <img src="../Img/perso.jpg" alt="Instructor de Dibujo" class="imagen-curso">
+      <div class="texto-principal">
+        <p><strong>Instructor:</strong> Ilse Guerrero
+          <a href="profesordibujo.html" class="boton-perfil">Ver perfil</a>
+        </p>
+        <p><strong>Inicio:</strong> Lunes 16 de septiembre de 2025</p>
+        <p><strong>Modalidad:</strong> Presencial</p>
+        <p><strong>Horario:</strong> 16:00 a 20:00 hrs</p>
+      </div>
+    </section>
+
+    <!-- Contenido del curso en formato acordeón -->
+    <section class="bloque">
+      <h2>✅ Contenido</h2>
+      <div class="accordion">
+
+        <!-- Tema 1 -->
+        <button class="toggle">Fundamentos del dibujo ⯈</button>
+        <div class="details">
+          <ul>
+            <li>Elementos básicos: punto, línea y forma</li>
+            <li>Proporciones humanas y animales</li>
+            <li>Perspectiva de uno y dos puntos</li>
+          </ul>
+        </div>
+
+        <!-- Tema 2 -->
+        <button class="toggle">Técnicas y materiales ⯈</button>
+        <div class="details">
+          <ul>
+            <li>Uso de lápiz, carboncillo y tinta</li>
+            <li>Sombras, luces y degradados</li>
+            <li>Volumen y textura en papel</li>
+          </ul>
+        </div>
+
+        <!-- Tema 3 -->
+        <button class="toggle">Dibujo artístico y creativo ⯈</button>
+        <div class="details">
+          <ul>
+            <li>Expresión personal a través del arte</li>
+            <li>Bocetaje libre</li>
+            <li>Estilos: realista, caricatura y manga</li>
+          </ul>
+        </div>
+
+        <!-- Tema 4 -->
+        <button class="toggle">Composición y narrativa visual ⯈</button>
+        <div class="details">
+          <ul>
+            <li>Regla de los tercios</li>
+            <li>Composición de escenas</li>
+            <li>Secuencias ilustradas</li>
+          </ul>
+        </div>
+
+        <!-- Proyecto final -->
+        <button class="toggle">Proyecto final ⯈</button>
+        <div class="details">
+          <p>Creación de una obra completa aplicando las técnicas aprendidas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fechas del curso -->
+    <section class="bloque">
+      <h2>📅 Fechas</h2>
+      <p>16 al 30 de septiembre (Lunes y Miércoles)</p>
+    </section>
+
+    <!-- Requisitos para inscribirse -->
+    <section class="bloque">
+      <h2>📝 Requisitos</h2>
+      <ul>
+        <li>Ser mayor de 12 años</li>
+        <li>Material básico de dibujo (se entrega lista)</li>
+        <li>Gusto por el arte y la creatividad</li>
+      </ul>
+    </section>
+
+    <!-- Información de costos -->
+    <section class="bloque costos">
+      <div class="costos-flex">
+        <div class="texto-costos">
+          <h2>💰 Costos</h2>
+          <p>Total: <strong>$1,600 m.n.</strong></p>
+          <p>Pago único o dos pagos de $800 m.n.</p>
+          <p>10% de descuento por estudiantes o pago en efectivo — <strong>$1,440 m.n.</strong></p>
+        </div>
+        <img src="../Img/lapiz.jpg" alt="Costos del curso" class="imagen-costos">
+      </div>
+    </section>
+
+    <!-- Botón final para adquirir el curso -->
+    <footer>
+      <a href="../Pages/datosper.html"><button>Adquirir el curso</button></a>
+    </footer>
+  </div>
+
+  <!-- Script para funcionalidad del acordeón -->
+  <script>
+    document.querySelectorAll('.toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const panel = button.nextElementSibling;
+        const isVisible = panel.style.display === 'block';
+
+        // Oculta todos los paneles abiertos
+        document.querySelectorAll('.details').forEach(p => p.style.display = 'none');
+
+        // Cambia todos los iconos a cerrado
+        document.querySelectorAll('.toggle').forEach(btn => {
+          btn.textContent = btn.textContent.replace('⯆', '⯈');
+        });
+
+        // Si no estaba visible, lo abre y cambia el icono
+        if (!isVisible) {
+          panel.style.display = 'block';
+          button.textContent = button.textContent.replace('⯈', '⯆');
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

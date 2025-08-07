@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="../ICON/icono.ico" type="image/x-icon">
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="../CSS/loginstyle.css">
+</head>
+
+<body>
+  <!-- Fondo burbujas -->
+  <div class="bubbles"></div>
+
+  <!-- Contenedor de login -->
+  <div class="login-container">
+    <div class="left-side"></div>
+    <div class="right-side">
+      <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="user icon">
+
+      <!-- Alerta de credenciales incorrectas -->
+      <div id="alerta" class="alert alert-danger d-none" role="alert" style="color: rgb(140, 129, 107); font-weight: bold;">
+        Usuario o contraseña incorrectos
+      </div>
+
+      <form id="loginform" onsubmit="return validarLogin()">
+        <input type="text" id="usuario" placeholder="Usuario" required>
+        <input type="password" id="clave" placeholder="Password" required>
+        <div class="options">
+          <label><input type="checkbox"> Recuérdame</label>
+          <a href="#">¿Olvidaste tu contraseña?</a>
+        </div>
+        <button type="submit">LOGIN</button>
+      </form>
+
+      <button type="button" class="create-account-button" onclick="location.href='registro.html'">
+        Crear cuenta
+      </button>
+      <a href="../index.html" class="return-button">Regresar a la página principal</a>
+
+    </div>
+  </div>
+
+
+
+    <!-- Script burbujas -->
+    <script>
+        const bubbleColors = ['#3c7c64', '#bdafa0'];
+        const container = document.querySelector('.bubbles');
+        for (let i = 0; i < 40; i++) {
+            const bubble = document.createElement('div');
+            bubble.classList.add('bubble');
+            let size = Math.random() * 80 + 20;
+            bubble.style.width = `${size}px`;
+            bubble.style.height = `${size}px`;
+            bubble.style.left = `${Math.random() * 100}%`;
+            bubble.style.animationDuration = `${10 + Math.random() * 15}s`;
+            bubble.style.backgroundColor = bubbleColors[Math.floor(Math.random() * bubbleColors.length)];
+            container.appendChild(bubble);
+        }
+       // Validación de login simulada
+    function validarLogin() {
+      const usuario = document.getElementById('usuario').value.trim();
+      const clave = document.getElementById('clave').value.trim();
+      const alerta = document.getElementById('alerta');
+
+      // Simulación de credenciales según rol
+      const credenciales = {
+        admin: { usuario: 'admin', clave: '1234' },
+        profesor: { usuario: 'Profesor', clave: 'Profe0sito' },
+        estudiante: { usuario: 'Estudiante', clave: 'Temporal#1234' }
+      };
+
+      let accesoConcedido = false;
+
+      // Verificar si las credenciales coinciden con alguna del objeto
+      for (const rol in credenciales) {
+        if (
+          usuario === credenciales[rol].usuario &&
+          clave === credenciales[rol].clave
+        ) {
+          accesoConcedido = true;
+          if (rol === 'admin') {
+            window.location.href = './admin.html';
+          } else if (rol === 'profesor') {
+            window.location.href = './grupos.html';
+          } else if (rol === 'estudiante') {
+            window.location.href = './perfil.html';
+          }
+          break;
+        }
+      }
+
+      if (!accesoConcedido) {
+        alerta.classList.remove('d-none');
+      }
+
+      return false; // Prevenir recarga
+    }
+    </script>
+</body>
+
+</html>

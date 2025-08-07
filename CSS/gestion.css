@@ -1,0 +1,157 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #bdafa0;
+    color: #333;
+}
+
+/* Encabezado */
+header {
+    background-color: #3c7c64;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    background-color: #3c7c64;
+    color: white;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Navegación rápida */
+.quick-nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #e7dcd2;
+    padding: 1rem;
+}
+
+.nav-button,
+.quick-nav button {
+    background-color: #3c7c64;
+    color: white;
+    text-decoration: none;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover,
+.quick-nav button:hover {
+    background-color: #2f5e4c;
+}
+
+/* Contenedor principal */
+main {
+    margin: 2rem;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Formularios */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input,
+form textarea,
+form select {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button[type="submit"] {
+    background-color: #3c7c64;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+form button:hover {
+    background-color: #2f5e4c;
+}
+
+/* Tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 0.8rem;
+    text-align: left;
+}
+
+table thead {
+    background-color: #3c7c64;
+    color: white;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f0e7df;
+}
+
+/* Botones de acción en tablas */
+table button {
+    background-color: #3c7c64;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    margin-right: 0.3rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+table button:hover {
+    background-color: #2f5e4c;
+}
+
+/* Inputs de búsqueda y filtros */
+.search-panel input,
+select {
+    width: 60%;
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin: 1rem 0;
+}
+
+.volver {
+    display: inline-block;
+    margin-bottom: 1rem;
+    background-color: #3c7c64;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.volver:hover {
+    background-color: #2f5e4c;
+}

@@ -1,0 +1,152 @@
+body {
+  background: linear-gradient(to bottom, #ebe5de, #ebe5de);
+  min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(135deg, #3c7c64, #bdafa0);
+    padding: 0rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    font-size: 1.1rem;
+    animation: slide-up 0.5s ease-out;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar a span {
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    transform: scale(1.05);
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+h1.filter-buttons button {
+  color: #fff;
+}
+
+.filter-buttons {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.filter-buttons .filter-btn {
+  margin: 5px;
+  border-color: #899b88;
+  color: #899b88;
+}
+
+.filter-buttons .filter-btn.active {
+  background-color: #ffffff;
+  color: #bdafa0;
+}
+
+.filter-buttons .filter-btn:hover {
+  background-color: #bdafa0; /* fondo blanco */
+  color: #ffff;           /* texto verde oscuro */
+  border-color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card-container {
+  padding: 0 20px;
+  margin-top: 40px; /* <- Aquí se separan los filtros de las tarjetas */
+}
+
+.curso {
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.curso:hover .card {
+  transform: scale(1.03);
+  background-color: #293f37; /* fondo verde oscuro */
+  color: #fff; /* texto blanco */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.curso:hover .card-title,
+.curso:hover .card-text {
+  color: #fff; /* asegurar texto blanco */
+}
+
+/* Opcional: hacer que el botón "Inscribirse" cambie para mejor visibilidad */
+.curso:hover .btn-primary {
+  background-color: #ffffff; /* botón blanco */
+  color: #3c7c64; /* texto verde oscuro */
+  border-color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.curso .card {
+  height: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.curso .card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.curso .card-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #3c7c64;
+}
+
+.curso .card-text {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.btn-inscribirse {
+  background-color: #bdafa0;
+  color: #3c3c3c;
+  border: none;
+  font-weight: bold;
+  border-radius: 30px; /* borde redondeado */
+  padding: 8px 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-inscribirse:hover {
+  background-color: #a8988c;
+  color: #fff;
+  transform: scale(1.05);
+}

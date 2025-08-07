@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Codificación del documento -->
+    <meta charset="UTF-8" />
+
+    <!-- Ícono de la pestaña -->
+    <link rel="icon" href="../IMG/logo.png" type="image/x-icon">
+
+    <!-- Título de la pestaña del navegador -->
+    <title>Gestión de Cursos - ACK</title>
+
+    <!-- Hoja de estilos personalizada para la gestión -->
+    <link rel="stylesheet" href="../CSS/gestion.css" />
+</head>
+
+<!-- Encabezado principal -->
+<header>
+    <h1>Gestión de Cursos</h1>
+</header>
+
+<main>
+    <!-- Sección para crear un nuevo curso -->
+    <h2>Nuevo Curso</h2>
+    <form>
+        <!-- Campo: Nombre del curso -->
+        <label>Nombre del curso:</label>
+        <input type="text" placeholder="Ej. Diseño accesible" />
+
+        <!-- Campo: Instructor -->
+        <label>Instructor:</label>
+        <input type="text" placeholder="Nombre del instructor" />
+
+        <!-- Campo: Duración -->
+        <label>Duración (horas):</label>
+        <input type="number" />
+
+        <!-- Campo: Descripción -->
+        <label>Descripción:</label>
+        <textarea placeholder="Descripción breve del curso"></textarea>
+
+        <!-- Botón para crear curso -->
+        <button type="submit">Crear curso</button>
+    </form>
+
+    <!-- Sección con listado de cursos existentes -->
+    <h2>Cursos existentes</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre del Curso</th>
+                <th>Área</th>
+                <th>Duración (horas)</th>
+                <th>Instructor</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Curso: Panadería y Repostería -->
+            <tr>
+                <td>Panadería y Repostería</td>
+                <td>Gastronomía</td>
+                <td>10</td>
+                <td>Laura Martínez</td>
+                <td><button>Editar</button> <button>Eliminar</button></td>
+            </tr>
+
+            <!-- Curso: Cocina Saludable -->
+            <tr>
+                <td>Cocina Saludable</td>
+                <td>Gastronomía</td>
+                <td>8</td>
+                <td>José Rivera</td>
+                <td><button>Editar</button> <button>Eliminar</button></td>
+            </tr>
+
+            <!-- Curso: Estadística Aplicada -->
+            <tr>
+                <td>Estadística Aplicada</td>
+                <td>Ciencia</td>
+                <td>12</td>
+                <td>Elena Torres</td>
+                <td><button>Editar</button> <button>Eliminar</button></td>
+            </tr>
+
+            <!-- Curso: Física Moderna -->
+            <tr>
+                <td>Física Moderna</td>
+                <td>Ciencia</td>
+                <td>14</td>
+                <td>Carlos Méndez</td>
+                <td><button>Editar</button> <button>Eliminar</button></td>
+            </tr>
+
+            <!-- Curso: Bitcoin y Criptomonedas -->
+            <tr>
+                <td>Bitcoin y Criptomonedas</td>
+                <td>Tecnología</td>
+                <td>6</td>
+                <td>Ana Jiménez</td>
+                <td><button>Editar</button> <button>Eliminar</button></td>
+            </tr>
+
+            <!-- Curso: Programación para Principiantes -->
+            <tr>
+                <td>Programación para Principiantes</td>
+                <td>Tecnología</td>
+                <td>16</td>
+                <td>Fernando López</td>
+                <td><button>Editar</button> <button>Eliminar</button></td>
+            </tr>
+
+            <!-- Curso: Inteligencia Emocional y Liderazgo -->
+            <tr>
+                <td>Inteligencia Emocional y Liderazgo</td>
+                <td>Desarrollo Personal</td>
+                <td>10</td>
+                <td>Lucía Ríos</td>
+                <td><button>Editar</button> <button>Eliminar</button></td>
+            </tr>
+
+            <!-- Curso: Emprendimiento Digital -->
+            <tr>
+                <td>Emprendimiento Digital</td>
+                <td>Negocios</td>
+                <td>8</td>
+                <td>Diego Navarro</td>
+                <td><button>Editar</button> <button>Eliminar</button></td>
+            </tr>
+
+            <!-- Curso: Diseño Gráfico Básico -->
+            <tr>
+                <td>Diseño Gráfico Básico</td>
+                <td>Creatividad</td>
+                <td>10</td>
+                <td>Paola Cruz</td>
+                <td><button>Editar</button> <button>Eliminar</button></td>
+            </tr>
+
+            <!-- Curso: Fotografía Creativa -->
+            <tr>
+                <td>Fotografía Creativa</td>
+                <td>Creatividad</td>
+                <td>10</td>
+                <td>Marco Aguirre</td>
+                <td><button>Editar</button> <button>Eliminar</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Botón para regresar al panel principal -->
+    <a href="admin.html" class="nav-button volver">← Volver al Panel</a>
+
+</main>
+
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../IMG/logo.png" type="image/x-icon">
+  <title>Estudiantes ACK</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Archivo CSS externo -->
+  <link rel="stylesheet" href="../CSS/grupos.css">
+
+  <style>
+    .img-circle {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      /* Hace la imagen circular */
+      object-fit: cover;
+      /* Asegura que la imagen se ajuste bien */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Contenedor principal -->
+  <div class="container">
+    <h1 class="text-center mb-4">Lista de Estudiantes ACK</h1>
+
+    <!-- Tabla responsiva para mostrar estudiantes -->
+    <div class="table-responsive">
+      <table class="table table-bordered tabla-personalizada">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Curso</th>
+            <th>Matrícula</th>
+            <th>Contacto</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody id="listaEstudiantes"></tbody>
+      </table>
+    </div>
+
+    <!-- Botones de navegación (paginación) -->
+    <div class="nav-buttons">
+      <button class="btn btn-custom" onclick="anterior()">
+        <i class="bi bi-arrow-left-circle"></i> Anterior
+      </button>
+      <button class="btn btn-custom" onclick="siguiente()">
+        Siguiente <i class="bi bi-arrow-right-circle"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Script para generar dinámicamente la tabla -->
+
+  <script>
+
+    // Lista de estudiantes (simulada como base de datos local)
+    const estudiantes = [
+
+      // Cada estudiante tiene nombre, matrícula, curso, contacto, género y foto
+      { nombre: 'Sofía Tamayo', matricula: '234113', direccion: 'Dibujo', contacto: '3147894512', genero: 'f', foto: '../IMG/perfil1.jpg' },
+      { nombre: 'Natalia Cardona', matricula: '234112', direccion: 'Cocina Oriental', contacto: '3015824671', genero: 'f3', foto: '../IMG/perfil2.jpg' },
+      { nombre: 'Julia Barón', matricula: '234111', direccion: 'Inteligencia Emocional y Liderazgo', contacto: '3215468719', genero: 'f2', foto: '../IMG/perfil3.jpg' },
+      { nombre: 'Rafael Castro', matricula: '234110', direccion: 'Dibujo', contacto: '3145648712', genero: 'm', foto: '../IMG/perfil4.jpg' },
+      { nombre: 'Emiliano Zapata', matricula: '234109', direccion: 'Bases de Datos', contacto: '3162453578', genero: 'm2', foto: '../IMG/perfil5.jpg' },
+      { nombre: 'Ana López', matricula: '234108', direccion: 'Bitcoin y Criptomonedas', contacto: '3123456789', genero: 'f', foto: '../IMG/perfil6.jpg' },
+      { nombre: 'Luis Martínez', matricula: '234107', direccion: 'Panadería y Repostería', contacto: '3198765432', genero: 'm', foto: '../IMG/perfil7.jpg' },
+      { nombre: 'Carla Gómez', matricula: '234106', direccion: 'Matemáticas Avanzadas', contacto: '3101234567', genero: 'f2', foto: '../IMG/perfil8.jpg' },
+      { nombre: 'Pedro Hernández', matricula: '234105', direccion: 'Emprendimiento Digital', contacto: '3187654321', genero: 'm2', foto: '../IMG/perfil9.jpg' },
+      { nombre: 'Lucía Ramírez', matricula: '234104', direccion: 'Cocina Saludable', contacto: '3176543210', genero: 'f3', foto: '../IMG/perfil10.jpg' },
+      { nombre: 'Jorge Torres', matricula: '234103', direccion: 'Diseño Gráfico Básico', contacto: '3154321098', genero: 'm', foto: '../IMG/perfil11.jpg' },
+      { nombre: 'Marta Díaz', matricula: '234102', direccion: 'Estadística Aplicada', contacto: '3134567890', genero: 'f', foto: '../IMG/perfil12.jpg' },
+      { nombre: 'Carlos Fernández', matricula: '234101', direccion: 'Fotografía Creativa', contacto: '3149876543', genero: 'm', foto: '../IMG/perfil13.jpg' },
+      { nombre: 'Elena Sánchez', matricula: '234100', direccion: 'Administración de Empresas', contacto: '3190123456', genero: 'f2', foto: '../IMG/perfil14.jpg' },
+      { nombre: 'Diego Morales', matricula: '234099', direccion: 'Bases de Datos', contacto: '3123987654', genero: 'm', foto: '../IMG/perfil15.jpg' },
+      { nombre: 'María Ruiz', matricula: '234098', direccion: 'Bitcoin y Criptomonedas', contacto: '3156789012', genero: 'f', foto: '../IMG/perfil16.jpg' },
+      { nombre: 'Antonio Vargas', matricula: '234097', direccion: 'Panadería y Repostería', contacto: '3178901234', genero: 'm2', foto: '../IMG/perfil17.jpg' },
+      { nombre: 'Sandra Navarro', matricula: '234096', direccion: 'Matemáticas Avanzadas', contacto: '3145678901', genero: 'f3', foto: '../IMG/perfil18.jpg' },
+      { nombre: 'José Martínez', matricula: '234095', direccion: 'Emprendimiento Digital', contacto: '3198765432', genero: 'm', foto: '../IMG/perfil19.jpg' },
+      { nombre: 'Patricia León', matricula: '234094', direccion: 'Cocina Saludable', contacto: '3187654321', genero: 'f', foto: '../IMG/perfil20.jpg' },
+      { nombre: 'Ricardo Pérez', matricula: '234093', direccion: 'Diseño Gráfico Básico', contacto: '3123456789', genero: 'm2', foto: '../IMG/perfil21.jpg' },
+      { nombre: 'Verónica Castro', matricula: '234092', direccion: 'Estadística Aplicada', contacto: '3176543210', genero: 'f2', foto: '../IMG/perfil22.jpg' },
+      { nombre: 'Miguel Ángel', matricula: '234091', direccion: 'Fotografía Creativa', contacto: '3165432109', genero: 'm', foto: '../IMG/perfil23.jpg' },
+      { nombre: 'Gabriela Flores', matricula: '234090', direccion: 'Administración de Empresas', contacto: '3132109876', genero: 'f3', foto: '../IMG/perfil24.jpg' },
+      { nombre: 'Santiago Ruiz', matricula: '234089', direccion: 'Bases de Datos', contacto: '3143210987', genero: 'm2', foto: '../IMG/perfil25.jpg' },
+      { nombre: 'Lorena Castro', matricula: '234088', direccion: 'Bitcoin y Criptomonedas', contacto: '3121098765', genero: 'f', foto: '../IMG/perfil26.jpg' },
+      { nombre: 'Fernando Gómez', matricula: '234087', direccion: 'Panadería y Repostería', contacto: '3192109876', genero: 'm', foto: '../IMG/perfil27.jpg' },
+      { nombre: 'Isabel Hernández', matricula: '234086', direccion: 'Matemáticas Avanzadas', contacto: '3170987654', genero: 'f2', foto: '../IMG/perfil28.jpg' },
+      { nombre: 'Andrés Mendoza', matricula: '234085', direccion: 'Emprendimiento Digital', contacto: '3159876543', genero: 'm2', foto: '../IMG/perfil29.jpg' },
+      { nombre: 'Claudia Ortiz', matricula: '234084', direccion: 'Cocina Saludable', contacto: '3138765432', genero: 'f3', foto: '../IMG/perfil30.jpg' }
+    ];
+
+    // Control de paginación
+    let indiceInicio = 0;
+    const porPagina = 10;
+
+    // Función para editar un estudiante (muestra alerta)
+    function editarEstudiante(estudiante) {
+      alert(`Editar: ${estudiante.nombre}\nCurso: ${estudiante.direccion}`);
+    }
+
+    // Función para eliminar un estudiante con confirmación
+    function eliminarEstudiante(indice) {
+      const confirmacion = confirm("¿Seguro que deseas eliminar este estudiante?");
+      if (confirmacion) {
+        estudiantes.splice(indiceInicio + indice, 1);
+        mostrarEstudiantes();
+      }
+    }
+
+    // Función para mostrar estudiantes en la tabla según paginación
+    function mostrarEstudiantes() {
+      const contenedor = document.getElementById('listaEstudiantes');
+      contenedor.innerHTML = '';
+      const grupo = estudiantes.slice(indiceInicio, indiceInicio + porPagina);
+      grupo.forEach((est, i) => {
+        const fila = document.createElement('tr');
+        fila.innerHTML = `
+          <td><strong>${est.nombre}</strong></td>
+          <td><i class="bi bi-book"></i> ${est.direccion}</td>
+          <td>
+            <img src="${est.foto}" alt="Foto de ${est.nombre}" class="img-circle">
+            ${est.matricula}
+          </td>
+          <td><i class="bi bi-telephone"></i> ${est.contacto}</td>
+          <td class="text-center">
+            <i class="bi bi-pencil-square icono-accion editar" title="Editar" onclick='editarEstudiante(${JSON.stringify(est)})'></i>
+            <i class="bi bi-trash icono-accion eliminar" title="Eliminar" onclick='eliminarEstudiante(${i})'></i>
+          </td>
+        `;
+        contenedor.appendChild(fila);
+      });
+    }
+
+    // Función para avanzar una página
+    function siguiente() {
+      if (indiceInicio + porPagina < estudiantes.length) {
+        indiceInicio += porPagina;
+        mostrarEstudiantes();
+      }
+    }
+
+    // Función para retroceder una página
+    function anterior() {
+      if (indiceInicio - porPagina >= 0) {
+        indiceInicio -= porPagina;
+        mostrarEstudiantes();
+      }
+    }
+
+    // Mostrar estudiantes al cargar la página
+    mostrarEstudiantes();
+  </script>
+
+</body>
+
+</html>

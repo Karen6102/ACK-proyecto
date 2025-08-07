@@ -1,0 +1,59 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #bdafa0;
+    margin: 0;
+    padding: 0;
+    color: #212529;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #3c7c64;
+    /* Color contrastante y cálido */
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.curso-card {
+    background: #fff;
+    border: 1px solid #3c7c64;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    margin: 0.75rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    accent-color: #3c7c64;
+}
+
+.btn-pagar {
+    background-color: #3c7c64;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px 20px;
+    border: none;
+}
+
+.btn-pagar:hover {
+    background-color: #356b56;
+}
+
+.btn-secondary {
+    background-color: #3c7c64;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px 20px;
+    border: none;   
+}
+
+.btn-secondary:hover {
+    background-color: #17352a;
+}

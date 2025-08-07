@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Configuración general del documento -->
+    <meta charset="UTF-8" />
+    <link rel="icon" href="../IMG/logo.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Inclusión de la librería Chart.js para gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Perfil</title>
+    <!-- Enlace a hoja de estilos personalizada -->
+    <link rel="stylesheet" href="../CSS/perfil.css" />
+</head>
+
+<body>
+    <!-- Elementos animados que caen (hojas y bellotas) -->
+    <div class="falling-elements">
+        <script>
+            const container = document.querySelector('.falling-elements');
+            const images = ['../IMG/hoja.png', '../IMG/bellota.png'];
+
+            // Generación aleatoria de elementos que caen
+            for (let i = 0; i < 25; i++) {
+                const img = document.createElement('img');
+                img.src = images[Math.floor(Math.random() * images.length)];
+                img.style.left = Math.random() * window.innerWidth + 'px';
+                img.style.animationDuration = (5 + Math.random() * 5) + 's';
+                container.appendChild(img);
+            }
+        </script>
+    </div>
+
+    <!-- Encabezado con imagen de fondo y superposición -->
+    <header class="header">
+        <img src="../IMG/estacion.jpg" alt="Fondo" class="header-img">
+        <div class="header-overlay"></div>
+    </header>
+
+    <!-- Contenedor principal -->
+    <main class="container">
+
+        <!-- Barra lateral con perfil y calendario -->
+        <aside class="sidebar">
+
+            <!-- Tarjeta de perfil -->
+            <div class="profile-card">
+                <img src="../IMG/perfil.jpg" alt="Perfil" class="profile-img">
+                <div class="profile-name">Benjamin Hoppe</div>
+                <div class="profile-username">@mrbenjaminhoppe</div>
+                <div class="profile-details">
+                    🌍 Mexico<br>
+                    🔗 <a href="#">BenjaminHoppe.co</a><br>
+                    📅 Abril 2012<br>
+                    📷 <a href="#">Cambiar Foto de Perfil</a>
+                </div>
+                <a href="#" class="btn">Editar perfil</a>
+            </div>
+
+            <!-- Calendario estático -->
+            <div class="calendar-card">
+                <div class="calendar-header">
+                    <span>Junio 2025</span>
+                    <div class="nav-buttons">
+                        <button>&lt;</button>
+                        <button>&gt;</button>
+                    </div>
+                </div>
+
+                <!-- Días de la semana y fechas -->
+                <div class="calendar-grid">
+                    <div>LUN</div>
+                    <div>MAR</div>
+                    <div>MIÉ</div>
+                    <div>JUE</div>
+                    <div>VIE</div>
+                    <div>SÁB</div>
+                    <div>DOM</div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div class="selected">5</div>
+                    <div>6</div>
+                    <div>7</div>
+                    <div>8</div>
+                    <div>9</div>
+                    <div>10</div>
+                    <div>11</div>
+                    <div>12</div>
+                    <div>13</div>
+                    <div>14</div>
+                    <div>15</div>
+                    <div>16</div>
+                    <div>17</div>
+                    <div>18</div>
+                    <div>19</div>
+                    <div>20</div>
+                    <div>21</div>
+                    <div>22</div>
+                    <div>23</div>
+                    <div>24</div>
+                    <div>25</div>
+                    <div>26</div>
+                    <div>27</div>
+                    <div>28</div>
+                    <div>29</div>
+                    <div>30</div>
+                    <div></div>
+                </div>
+
+                <!-- Imagen decorativa al pie del calendario -->
+                <div class="calendar-footer">
+                    <img src="../IMG/hoja2.gif" alt="hoja" class="acorns">
+                </div>
+            </div>
+
+            <!-- Gráfico circular de progreso -->
+            <div class="calendar-pie">
+                <h3>Distribución del Progreso</h3>
+                <canvas id="progressPieChart" width="250" height="250"></canvas>
+            </div>
+        </aside>
+
+        <!-- Panel principal del usuario -->
+        <div class="dashboard">
+            <h2>Mi Tablero</h2>
+
+            <!-- Estadísticas generales -->
+            <div class="dashboard-stats">
+                <div class="stat">
+                    <strong>65%</strong>
+                    <p>Progreso General</p>
+                </div>
+                <div class="stat">
+                    <strong>2</strong>
+                    <p>Certificados</p>
+                </div>
+                <div class="stat">
+                    <strong>45h</strong>
+                    <p>Horas Estudiadas</p>
+                </div>
+                <div class="stat">
+                    <strong>2</strong>
+                    <p>Cursos Activos</p>
+                </div>
+            </div>
+
+            <!-- Progreso por curso -->
+            <div class="progress-section">
+                <h3>Progreso por Curso</h3>
+                <div class="course">
+                    <p><strong>Matemáticas Avanzadas</strong> - 18/24 lecciones completadas</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="course">
+                    <p><strong>Panadería y Repostería</strong> - 7/12 lecciones completadas</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 55%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Logros obtenidos -->
+            <div class="logros">
+                <h3>Logros</h3>
+                <ul>
+                    <li>⭐ Primera Lección</li>
+                    <li>📅 Semana Completa</li>
+                    <li>📘 Matemático</li>
+
+                    <!-- Tabla de horario de cursos -->
+                    <div class="course-schedule-table">
+                        <h3>📅 Horario de Cursos</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Curso</th>
+                                    <th>Días</th>
+                                    <th>Horario</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Matemáticas Avanzadas</td>
+                                    <td>Lunes, Miércoles, Viernes</td>
+                                    <td>9:00 a.m. - 10:30 a.m.</td>
+                                </tr>
+                                <tr>
+                                    <td>Natación Técnica</td>
+                                    <td>Martes, Jueves</td>
+                                    <td>5:00 p.m. - 6:30 p.m.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script para generar el gráfico de pastel -->
+    <script>
+        const ctx = document.getElementById('progressPieChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Matemáticas Avanzadas', 'Natación Técnica'],
+                datasets: [{
+                    label: 'Progreso',
+                    data: [75, 55],
+                    backgroundColor: [
+                        '#6ab04c',
+                        '#2980b9'
+                    ],
+                    borderColor: '#fff',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

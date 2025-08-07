@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Curso Bitcoin y Criptomonedas</title>
+  <link rel="icon" href="../IMG/logo.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../CSS/bitcoin.css">
+</head>
+
+<body>
+  <!-- Botón para regresar a la página de cursos -->
+  <div class="volver-cursos">
+    <a href="cursos.html" class="btn-volver">
+      <!-- Ícono de flecha hacia la izquierda (Bootstrap Icons) -->
+      <i class="bi bi-arrow-left-circle"></i> Volver a cursos
+    </a>
+  </div>
+
+  <!-- Tarjeta principal que contiene toda la información del curso -->
+  <div class="profile-card">
+
+    <!-- Encabezado con título del curso y enlace al sitio web -->
+    <header class="header">
+      <h1>Bitcoin y Criptomonedas</h1>
+      <a href="#">www.ackcursos.mx</a>
+    </header>
+
+    <!-- Sección principal con imagen del curso e información del instructor -->
+    <section class="info-principal">
+      <img src="../Img/bit.jpg" alt="Instructor Cripto" class="imagen-curso">
+      <div class="texto-principal">
+        <p><strong>Instructor:</strong> Carla Mendoza
+          <!-- Enlace al perfil del instructor -->
+          <a href="pofesorbitcoin.html" class="boton-perfil">Ver perfil</a>
+        </p>
+        <p><strong>Inicio:</strong> Martes 3 de septiembre de 2025</p>
+        <p><strong>Modalidad:</strong> En línea (grabado y en vivo)</p>
+        <p><strong>Horario en vivo:</strong> 19:00 a 21:00 hrs</p>
+      </div>
+    </section>
+
+    <!-- Sección de contenido del curso con acordeones desplegables -->
+    <section class="bloque">
+      <h2>✅ Contenido</h2>
+      <div class="accordion">
+        <!-- Botón desplegable: Introducción -->
+        <button class="toggle">Introducción a las criptomonedas ⯯</button>
+        <div class="details">
+          <ul>
+            <li>Origen y evolución de Bitcoin</li>
+            <li>Blockchain: concepto y funcionamiento</li>
+            <li>Principales criptomonedas (Ethereum, Litecoin, etc.)</li>
+          </ul>
+        </div>
+
+        <!-- Botón desplegable: Blockchain -->
+        <button class="toggle">Tecnología blockchain ⯯</button>
+        <div class="details">
+          <ul>
+            <li>Minería y validación de bloques</li>
+            <li>Hash, nodos y contratos inteligentes</li>
+            <li>Tipos de blockchain: pública, privada e híbrida</li>
+          </ul>
+        </div>
+
+        <!-- Botón desplegable: Seguridad -->
+        <button class="toggle">Seguridad y billeteras ⯯</button>
+        <div class="details">
+          <ul>
+            <li>Billeteras frías y calientes</li>
+            <li>Gestión de claves privadas</li>
+            <li>Prevención de fraudes y estafas</li>
+          </ul>
+        </div>
+
+        <!-- Botón desplegable: Exchanges -->
+        <button class="toggle">Exchanges y trading básico ⯯</button>
+        <div class="details">
+          <ul>
+            <li>Plataformas de intercambio</li>
+            <li>Análisis técnico vs análisis fundamental</li>
+            <li>Cómo crear una orden de compra o venta</li>
+          </ul>
+        </div>
+
+        <!-- Botón desplegable: Aspectos legales -->
+        <button class="toggle">Aspectos legales y fiscales ⯯</button>
+        <div class="details">
+          <ul>
+            <li>Criptomonedas en México</li>
+            <li>Declaración de activos digitales</li>
+            <li>Regulación internacional</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección con fechas del curso -->
+    <section class="bloque">
+      <h2>🗓 Fechas</h2>
+      <p>03 al 20 de septiembre (Martes y Jueves)</p>
+    </section>
+
+    <!-- Sección con requisitos para tomar el curso -->
+    <section class="bloque">
+      <h2>📝 Requisitos</h2>
+      <ul>
+        <li>Mayoría de edad</li>
+        <li>Conexión a internet</li>
+        <li>Computadora o celular</li>
+      </ul>
+    </section>
+
+    <!-- Sección con información de costos -->
+    <section class="bloque costos">
+      <div class="costos-flex">
+        <div class="texto-costos">
+          <h2>💰 Costos</h2>
+          <p>Total: <strong>$25,000 m.n.</strong></p>
+          <p>Inscripción: $12,500 m.n. <br> 2do. Pago: $12,500 m.n.</p>
+          <p>20% de descuento por pago único — <strong>$20,000 m.n.</strong></p>
+        </div>
+        <!-- Imagen decorativa relacionada a los costos -->
+        <img src="../Img/coin.jpg" alt="Costos del curso" class="imagen-costos">
+      </div>
+    </section>
+
+    <!-- Pie de página con botón para adquirir el curso -->
+    <footer>
+      <a href="../Pages/datosper.html">
+        <button>Adquirir el curso</button>
+      </a>
+    </footer>
+  </div>
+
+  <!-- Script para controlar el comportamiento del acordeón -->
+  <script>
+    // Selecciona todos los botones con clase 'toggle'
+    document.querySelectorAll('.toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const panel = button.nextElementSibling; // El panel de contenido que sigue al botón
+        const isVisible = panel.style.display === 'block'; // Verifica si ya está visible
+
+        // Oculta todos los paneles abiertos
+        document.querySelectorAll('.details').forEach(p => p.style.display = 'none');
+
+        // Restaura los íconos de todos los botones
+        document.querySelectorAll('.toggle').forEach(btn => {
+          btn.textContent = btn.textContent.replace('⯆', '⯯');
+        });
+
+        // Si no estaba visible, lo muestra y cambia el ícono
+        if (!isVisible) {
+          panel.style.display = 'block';
+          button.textContent = button.textContent.replace('⯯', '⯆');
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

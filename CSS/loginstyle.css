@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(to bottom, #3c7c64, #bdafa0);
+    position: relative;
+    overflow: hidden;
+}
+
+
+.bubbles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.bubble {
+    position: absolute;
+    bottom: -100px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: rise 20s infinite ease-in;
+    opacity: 0.6;
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.4;
+    }
+
+    100% {
+        transform: translateY(-110vh) scale(1.2);
+        opacity: 0;
+    }
+}
+
+.login-container {
+    width: 850px;
+    height: 500px;
+    display: flex;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.left-side {
+    width: 50%;
+    background-image: url('../IMG/online.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.right-side {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    color: #bdafa0;
+}
+
+.right-side img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    border-radius: 2rem;
+    padding: 12px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+
+input::placeholder {
+    color: #ddd;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.options label {
+    color: #bdafa0;
+}
+
+.options a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+button[type="submit"],
+.create-account-button {
+    background-color: #3c7c64;
+    border: none;
+    padding: 12px;
+    border-radius: 2rem;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.create-account-button:hover {
+    background-color: #3c7c64;
+}
+
+.return-button {
+    margin-top: 15px;
+    background: transparent;
+    border: 1px solid #3c7c64;
+    padding: 10px;
+    border-radius: 2rem;
+    color: #3c7c64;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.return-button:hover {
+    background-color: #bdafa0;
+    color: #2a2a2a;
+}

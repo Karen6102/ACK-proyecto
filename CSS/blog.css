@@ -1,0 +1,282 @@
+* {
+      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    body {
+      background-color: #ebe5de;
+      margin: 0;
+      color: #333;
+    }
+
+    .profile-header {
+      background-image: url('../IMG/blog.jpg');
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      padding: 13rem;
+      color: white;
+      position: relative;
+    }
+
+    .profile-header h1 {
+      font-size: 2rem;
+      margin: 0;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    .profile-header p {
+      margin-top: 8px;
+      font-size: 1rem;
+    }
+
+    .link {
+      margin-top: 10px;
+      display: inline-block;
+      color: white;
+      text-decoration: underline;
+    }
+
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 15px;
+      flex: 1 1 300px;
+      max-width: 450px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .card-title {
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+
+    .comments {
+      font-size: 0.95rem;
+      margin-top: 15px;
+    }
+
+    .comments strong {
+      display: block;
+      margin-top: 5px;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .tab-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #a3a592;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none; /* Esto es clave para que los <a> no se subrayen */
+  transition: background-color 0.3s;
+}
+
+.tab-button:hover {
+  background-color: #2b5d4a;
+}
+
+
+    @media screen and (max-width: 600px) {
+      .profile-header h1 {
+        font-size: 2rem;
+      }
+
+      .card-title {
+        font-size: 1rem;
+      }
+
+      .tab-button {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+      }
+    }
+
+.comments-card {
+  padding-bottom: 20px;
+  background-color: #a3a592;
+}
+
+.comments {
+  margin-top: 15px;
+}
+
+.comment-count {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.comment {
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+}
+
+.comment .time {
+  font-size: 12px;
+  color: #888;
+}
+
+.comment p {
+  margin: 5px 0 0;
+}
+
+.new-comment {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.new-comment textarea {
+  resize: vertical;
+  min-height: 80px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.publish-button {
+  align-self: flex-end;
+  background-color: #709077;
+  color: white;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.publish-button:hover {
+  background-color: #e55b72;
+}
+
+
+/* Sección que ocupa todo el ancho */
+.create-blog-section {
+  width: 100%;
+  background-color: #3c7c64;
+  margin-top: 30px;
+  padding: 40px 0;
+  margin-bottom: 60px;
+}
+
+/* Contenido centrado dentro de un ancho limitado */
+.create-blog-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.create-blog-content h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.create-blog-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.create-button {
+  padding: 12px 30px;
+  background-color: #bdafa0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-button:hover {
+  background-color: #7e746a;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(135deg, #3c7c64, #bdafa0);
+    padding: 0rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    font-size: 1.1rem;
+    animation: slide-up 0.5s ease-out;
+    
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar a span {
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    transform: scale(1.05);
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

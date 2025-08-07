@@ -1,0 +1,101 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #bdafa0;
+    color: #333;
+}
+
+/* Encabezado */
+header {
+    background-color: #3c7c64;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    background-color: #3c7c64;
+    color: white;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Contenido principal */
+main {
+    margin: 2rem;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Filtro por rol */
+main label {
+    font-weight: bold;
+}
+
+main select {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f1ede9;
+}
+
+/* Tabla de usuarios */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 0.8rem;
+    text-align: left;
+}
+
+table thead {
+    background-color: #3c7c64;
+    color: white;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f6f0ea;
+}
+
+/* Botones de acción */
+table button {
+    background-color: #3c7c64;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 0.4rem;
+}
+
+table button:hover {
+    background-color: #2f5e4c;
+}
+
+/* Botón de regreso */
+.volver {
+    display: inline-block;
+    margin-top: 2rem;
+    background-color: #3c7c64;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.volver:hover {
+    background-color: #2f5e4c;
+}

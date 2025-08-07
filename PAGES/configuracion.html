@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../IMG/logo.png" type="image/x-icon">
+    <title>Configuración del Sistema - ACK</title>
+    <link rel="stylesheet" href="../CSS/configuracion.css" />
+</head>
+
+<body>
+
+    <!-- Encabezado principal del sitio -->
+    <header>
+        <h1>Configuración del Sistema</h1> <!-- Título visible en la parte superior de la página -->
+    </header>
+
+    <!-- Contenedor principal para la configuración, con clase para estilos -->
+    <main class="configuracion">
+
+        <!-- Sección para personalizar preferencias visuales del sistema -->
+        <section>
+            <h2>Preferencias Visuales</h2> <!-- Subtítulo de la sección -->
+
+            <!-- Formulario para cambiar tema y fuente -->
+            <form>
+
+                <!-- Selector para elegir el tema de colores -->
+                <label for="tema">Tema de color:</label>
+                <select id="tema">
+                    <option value="ack">Paleta ACK</option>
+                    <option value="oscuro">Modo oscuro</option>
+                    <option value="alto-contraste">Alto contraste</option>
+                </select>
+
+                <!-- Selector para cambiar la fuente del sistema -->
+                <label for="fuente">Fuente principal:</label>
+                <select id="fuente">
+                    <option value="Segoe UI">Segoe UI</option>
+                    <option value="Roboto">Roboto</option>
+                    <option value="Open Sans">Open Sans</option>
+                </select>
+
+                <!-- Botón para guardar los cambios visuales -->
+                <button type="submit">Guardar Cambios</button>
+
+            </form>
+        </section>
+
+        <!-- Sección de opciones relacionadas con accesibilidad -->
+        <section>
+            <h2>Accesibilidad</h2>
+
+            <!-- Formulario con opciones de accesibilidad -->
+            <form>
+
+                <!-- Opción para lector de pantalla -->
+                <label>
+                    <input type="checkbox" /> Activar soporte para lector de pantalla
+                </label>
+
+                <!-- Opción para agrandar texto -->
+                <label>
+                    <input type="checkbox" /> Ampliar tamaño de texto
+                </label>
+
+                <!-- Opción para usar navegación con teclado -->
+                <label>
+                    <input type="checkbox" /> Activar navegación con teclado
+                </label>
+
+                <!-- Botón para aplicar la configuración de accesibilidad -->
+                <button type="submit">Aplicar configuración</button>
+
+            </form>
+        </section>
+
+        <!-- Sección para configuración general como idioma y consejos -->
+        <section>
+            <h2>Preferencias Generales</h2>
+
+            <!-- Formulario para idioma y tips -->
+            <form>
+
+                <!-- Selección de idioma -->
+                <label for="idioma">Idioma:</label>
+                <select id="idioma">
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                    <option value="pt">Português</option>
+                </select>
+
+                <!-- Checkbox para mostrar tips al iniciar -->
+                <label>
+                    <input type="checkbox" /> Mostrar tips educativos al iniciar sesión
+                </label>
+
+                <!-- Botón para guardar preferencias generales -->
+                <button type="submit">Guardar preferencias</button>
+
+            </form>
+        </section>
+
+        <!-- Enlace para volver al panel de administración -->
+        <a href="admin.html" class="nav-button volver">← Volver al Panel</a>
+
+    </main>
+
+    <!-- Pie de página del sitio -->
+    <footer class="bg-dark text-white pt-4 pb-3 mt-5">
+
+        <!-- Contenedor del contenido del pie de página -->
+        <div class="container text-center">
+
+            <!-- Logo de la organización -->
+            <img src="../IMG/logo.png" alt="Logo ACK" style="height: 50px;" class="mb-3">
+
+            <!-- Texto de derechos reservados -->
+            <p class="mb-2">© 2025 ACK. Todos los derechos reservados.</p>
+
+            <!-- Mensaje adicional inspirador -->
+            <p class="small">Tu aprendizaje comienza aquí. Conéctate, inspírate y evoluciona con nosotros.</p>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>

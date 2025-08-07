@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Cursos</title>
+  <link rel="icon" href="../ICON/icono.ico" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../CSS/cursos.css">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+<!-- Catálogo de Cursos HTML con filtros por categoría -->
+<section class="container py-5">
+  <h1 class="text-center mb-4 fw-bold">Catálogo de Cursos</h1>
+
+  <!-- Botones de Filtro -->
+  <div class="filter-buttons mb-4">
+    <button class="btn btn-outline-light filter-btn active" data-filter="all"><i class="fas fa-list me-2"></i>Todos</button>
+    <button class="btn btn-outline-light filter-btn" data-filter="gastronomia"><i class="fas fa-utensils me-2"></i>Gastronomía</button>
+    <button class="btn btn-outline-light filter-btn" data-filter="academico"><i class="fas fa-book me-2"></i>Académico</button>
+    <button class="btn btn-outline-light filter-btn" data-filter="tecnologia"><i class="fas fa-laptop-code me-2"></i>Tecnología</button>
+    <button class="btn btn-outline-light filter-btn" data-filter="desarrollo"><i class="fas fa-user-graduate me-2"></i>Desarrollo Personal</button>
+    <button class="btn btn-outline-light filter-btn" data-filter="arte"><i class="fas fa-paint-brush me-2"></i>Arte y Creatividad</button>
+  </div>
+
+  <!-- Tarjetas de Cursos -->
+  <div class="row card-container">
+    <!-- Gastronomía -->
+    <div class="col-md-4 mb-4 curso gastronomia">
+      <div class="card">
+        <img src="../Img/oriental.jpg" class="card-img-top" alt="Cocina Oriental">
+        <div class="card-body">
+          <h5 class="card-title">Cocina Oriental</h5>
+          <p class="card-text">Aprende a preparar platillos tradicionales de la cocina asiática.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+          <button class="btn btn-inscribirse btn-sm">Ver curso</button>
+            <span class="fw-bold">$18,000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4 curso gastronomia">
+      <div class="card">
+        <img src="../Img/postres.jpg" class="card-img-top" alt="Panadería y Repostería">
+        <div class="card-body">
+          <h5 class="card-title">Panadería y Repostería</h5>
+          <p class="card-text">Introducción a la elaboración de panes y postres.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <a href="../PAGES/postres.html"><button class="btn btn-inscribirse btn-sm">Ver curso</button></a>
+            <span class="fw-bold">$15,000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4 curso gastronomia">
+      <div class="card">
+        <img src="../Img/saludable.jpg" class="card-img-top" alt="Cocina Saludable">
+        <div class="card-body">
+          <h5 class="card-title">Cocina Saludable</h5>
+          <p class="card-text">Aprende a cocinar de forma nutritiva y equilibrada.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <button class="btn btn-inscribirse btn-sm">Ver curso</button>
+            <span class="fw-bold">$15,000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Académico -->
+    <div class="col-md-4 mb-4 curso academico">
+      <div class="card">
+        <img src="../Img/mate.jpg" class="card-img-top" alt="Matemáticas Avanzadas">
+        <div class="card-body">
+          <h5 class="card-title">Matemáticas Avanzadas</h5>
+          <p class="card-text">Curso orientado al análisis matemático y álgebra avanzada.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <a href="../PAGES/mate.html"><button class="btn btn-inscribirse btn-sm">Ver curso</button></a>
+            <span class="fw-bold">$2,000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4 curso academico">
+      <div class="card">
+        <img src="../Img/estadistica.jpg" class="card-img-top" alt="Estadística Aplicada">
+        <div class="card-body">
+          <h5 class="card-title">Estadística Aplicada</h5>
+          <p class="card-text">Fundamentos de la estadística en problemas reales.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <button class="btn btn-inscribirse btn-sm">Ver curso</button>
+            <span class="fw-bold">$8,000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4 curso academico">
+      <div class="card">
+        <img src="../Img/fisica.jpg" class="card-img-top" alt="Física Moderna">
+        <div class="card-body">
+          <h5 class="card-title">Física Moderna</h5>
+          <p class="card-text">Introducción a conceptos actuales de la física.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <button class="btn btn-inscribirse btn-sm">Ver curso</button>
+            <span class="fw-bold">$4,500</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tecnología -->
+    <div class="col-md-4 mb-4 curso tecnologia">
+      <div class="card">
+        <img src="../Img/bases.jpg" class="card-img-top" alt="Bases de Datos">
+        <div class="card-body">
+          <h5 class="card-title">Bases de Datos</h5>
+          <p class="card-text">Aprende a diseñar y manejar bases de datos relacionales.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <button class="btn btn-inscribirse btn-sm">Ver curso</button>
+            <span class="fw-bold">$3,200</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4 curso tecnologia">
+      <div class="card">
+        <img src="../Img/bitcoin.jpg" class="card-img-top" alt="Bitcoin y Criptomonedas">
+        <div class="card-body">
+          <h5 class="card-title">Bitcoin y Criptomonedas</h5>
+          <p class="card-text">Exploración del mundo de las monedas digitales.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <a href="../PAGES/bitcoin.html"><button class="btn btn-inscribirse btn-sm">Ver curso</button></a>
+            <span class="fw-bold">$43,000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4 curso tecnologia">
+      <div class="card">
+        <img src="../Img/progra.jpg" class="card-img-top" alt="Programación para Principiantes">
+        <div class="card-body">
+          <h5 class="card-title">Programación para Principiantes</h5>
+          <p class="card-text">Fundamentos de lógica y sintaxis de programación.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <button class="btn btn-inscribirse btn-sm">Ver curso</button>
+            <span class="fw-bold">$20,000 </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desarrollo Personal -->
+    <div class="col-md-4 mb-4 curso desarrollo">
+      <div class="card">
+        <img src="../Img/admin.jpg" class="card-img-top" alt="Administración de Empresas">
+        <div class="card-body">
+          <h5 class="card-title">Administración de Empresas</h5>
+          <p class="card-text">Fundamentos de la gestión empresarial moderna.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <button class="btn btn-inscribirse btn-sm">Ver curso</button>
+            <span class="fw-bold">$15,000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4 curso desarrollo">
+      <div class="card">
+        <img src="../Img/lider.jpg" class="card-img-top" alt="Inteligencia Emocional y Liderazgo">
+        <div class="card-body">
+          <h5 class="card-title">Inteligencia Emocional y Liderazgo</h5>
+          <p class="card-text">Habilidades blandas para el entorno profesional.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <button class="btn btn-inscribirse btn-sm">Ver curso</button>
+            <span class="fw-bold">$17,000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4 curso desarrollo">
+      <div class="card">
+        <img src="../Img/empre.jpg" class="card-img-top" alt="Emprendimiento Digital">
+        <div class="card-body">
+          <h5 class="card-title">Emprendimiento Digital</h5>
+          <p class="card-text">Cómo crear y lanzar un negocio en línea.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <a href="../PAGES/empredimiento.html"><button class="btn btn-inscribirse btn-sm">Ver curso</button></a>
+            <span class="fw-bold">$22,000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Arte y Creatividad -->
+    <div class="col-md-4 mb-4 curso arte">
+      <div class="card">
+        <img src="../Img/dibujo.jpg" class="card-img-top" alt="Dibujo">
+        <div class="card-body">
+          <h5 class="card-title">Dibujo</h5>
+          <p class="card-text">Curso para desarrollar habilidades artísticas desde cero.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <a href="../PAGES/dibujo.html"><button class="btn btn-inscribirse btn-sm">Ver curso</button></a>
+            <span class="fw-bold">$1,600</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4 curso arte">
+      <div class="card">
+        <img src="../Img/dise.jpg" class="card-img-top" alt="Diseño Gráfico Básico">
+        <div class="card-body">
+          <h5 class="card-title">Diseño Gráfico Básico</h5>
+          <p class="card-text">Introducción al diseño visual con herramientas digitales.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <button class="btn btn-inscribirse btn-sm">Ver curso</button>
+            <span class="fw-bold">$1,800</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4 curso arte">
+      <div class="card">
+        <img src="../Img/foto.jpg" class="card-img-top" alt="Fotografía Creativa">
+        <div class="card-body">
+          <h5 class="card-title">Fotografía Creativa</h5>
+          <p class="card-text">Aprende a capturar y editar imágenes con enfoque artístico.</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <button class="btn btn-inscribirse btn-sm">Ver curso</button>
+            <span class="fw-bold">$10,000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="container py-5"></section>
+
+<div class="navbar">
+    <a href="../index.html"><span>🏠</span> Inicio</a>
+    <a href="../PAGES/cursos.html"><span>📚</span> Cursos</a>
+    <a href="../PAGES/blog.html"><span>📝</span> Blog</a>
+    <a href="../PAGES/contacto.html"><span>📞</span> Contacto</a>
+    <a href="../PAGES/opiniones.html"><span>💬</span> Opiniones</a>
+</div>
+  
+<!-- Script para Filtrado -->
+<script>
+  document.querySelectorAll('.filter-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const filter = button.dataset.filter;
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      document.querySelectorAll('.curso').forEach(card => {
+        if (filter === 'all' || card.classList.contains(filter)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #bdafa0;
+    color: #2e2e2e;
+}
+
+header {
+    background-color: #3c7c64;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+h1,
+h2 {
+    margin-top: 0;
+}
+
+.configuracion {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+}
+
+label,
+select,
+input[type="checkbox"] {
+    display: block;
+    margin: 0.8rem 0;
+    font-size: 1rem;
+}
+
+select {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #3c7c64;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #bdafa0;
+}
+
+.volver {
+    display: inline-block;
+    margin-bottom: 1rem;
+    background-color: #3c7c64;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.volver:hover {
+    background-color: #2f5e4c;
+}
+
+footer {
+    text-align: center;
+    background-color: #040f0b;
+    color: white;
+    padding: 1rem;
+    margin-top: 2rem;
+}

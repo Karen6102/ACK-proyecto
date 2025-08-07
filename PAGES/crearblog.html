@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+
+<head>
+    <meta charset="UTF-8" /> <!-- Codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Configuración para diseño responsivo -->
+    <link rel="icon" href="../ICON/icono.ico" type="image/x-icon" /> <!-- Ícono de la pestaña del navegador -->
+    <title>Crear Nuevo Blog | ACK</title> <!-- Título de la página -->
+    <link rel="stylesheet" href="../CSS/crearblog.css" /> <!-- Enlace al archivo de estilos CSS -->
+</head>
+
+<body>
+
+    <!-- Contenedor del formulario -->
+    <div class="form-container">
+        <h2>📝 Crear Nuevo Blog</h2>
+
+        <!-- Formulario para crear un nuevo blog -->
+        <form action="#" method="POST" enctype="multipart/form-data">
+
+            <!-- Campo para el título del blog -->
+            <label for="titulo">Título del blog</label>
+            <input type="text" id="titulo" name="titulo" required />
+
+            <!-- Campo para subir una imagen destacada -->
+            <label for="imagen">Imagen destacada</label>
+            <input type="file" id="imagen" name="imagen" accept="image/*" />
+
+            <!-- Campo para el contenido del blog -->
+            <label for="contenido">Contenido</label>
+            <textarea id="contenido" name="contenido" placeholder="Escribe aquí tu artículo..." required></textarea>
+
+            <!-- Botón para enviar el formulario -->
+            <button type="submit" class="btn-submit">Publicar Blog</button>
+        </form>
+
+        <!-- Enlace para volver a la página del blog -->
+        <a href="blog.html" class="back-link">← Volver al blog</a>
+    </div>
+
+</body>
+
+</html> <!-- Fin del documento HTML -->

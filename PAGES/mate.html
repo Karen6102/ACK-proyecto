@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Lenguaje del documento: Español -->
+
+<head>
+  <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+  <title>Curso Matemáticas Avanzadas</title> <!-- Título que aparece en la pestaña del navegador -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Diseño responsive -->
+  <link rel="icon" href="../IMG/logo.png" type="image/x-icon"> <!-- Ícono de pestaña -->
+  <!-- Íconos de Bootstrap para flechas y botones -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- Enlace a la hoja de estilos personalizada -->
+  <link rel="stylesheet" href="../CSS/mate.css">
+</head>
+
+<body>
+  <!-- Botón de regreso a la página de cursos -->
+  <div class="volver-cursos">
+    <a href="cursos.html" class="btn-volver">
+      <i class="bi bi-arrow-left-circle"></i> Volver a cursos
+    </a>
+  </div>
+
+  <!-- Contenedor principal del perfil del curso -->
+  <div class="profile-card">
+    <!-- Encabezado del curso -->
+    <header class="header">
+      <h1>Matemáticas Avanzadas</h1>
+      <a href="#">www.ackcursos.mx</a> <!-- Enlace ficticio -->
+    </header>
+
+    <!-- Información principal del curso -->
+    <section class="info-principal">
+      <img src="../Img/mates.jpg" alt="Instructor Matemáticas" class="imagen-curso"> <!-- Imagen del curso -->
+      <div class="texto-principal">
+        <!-- Detalles del curso -->
+        <p><strong>Instructor:</strong> Dr. Esteban Gómez <a href="profesormate.html" class="boton-perfil">Ver
+            perfil</a></p>
+        <p><strong>Inicio:</strong> Lunes 9 de septiembre de 2025</p>
+        <p><strong>Modalidad:</strong> En línea</p>
+        <p><strong>Horario:</strong> 17:00 a 20:00 hrs</p>
+      </div>
+    </section>
+
+    <!-- Contenido del curso con acordeones -->
+    <section class="bloque">
+      <h2>✅ Contenido</h2>
+      <div class="accordion">
+        <!-- Cada botón despliega su contenido al hacer clic -->
+        <button class="toggle">Álgebra avanzada ⯈</button>
+        <div class="details">
+          <ul>
+            <li>Operaciones con matrices</li>
+            <li>Transformaciones lineales</li>
+            <li>Diagonalización y valores propios</li>
+          </ul>
+        </div>
+
+        <button class="toggle">Cálculo diferencial e integral ⯈</button>
+        <div class="details">
+          <ul>
+            <li>Funciones de varias variables</li>
+            <li>Integrales dobles y triples</li>
+            <li>Teoremas del cálculo vectorial</li>
+          </ul>
+        </div>
+
+        <button class="toggle">Ecuaciones diferenciales ⯈</button>
+        <div class="details">
+          <ul>
+            <li>Ecuaciones de primer y segundo orden</li>
+            <li>Sistemas de ecuaciones diferenciales</li>
+            <li>Aplicaciones en física e ingeniería</li>
+          </ul>
+        </div>
+
+        <button class="toggle">Probabilidad y estadística avanzada ⯈</button>
+        <div class="details">
+          <ul>
+            <li>Distribuciones continuas y discretas</li>
+            <li>Estimación y prueba de hipótesis</li>
+            <li>Regresión y correlación</li>
+          </ul>
+        </div>
+
+        <button class="toggle">Aplicaciones prácticas ⯈</button>
+        <div class="details">
+          <ul>
+            <li>Modelado matemático</li>
+            <li>Problemas de optimización</li>
+            <li>Matemáticas aplicadas al análisis de datos</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fechas del curso -->
+    <section class="bloque">
+      <h2>📅 Fechas</h2>
+      <p>09 al 30 de septiembre (Lunes, Miércoles y Viernes)</p>
+    </section>
+
+    <!-- Requisitos del curso -->
+    <section class="bloque">
+      <h2>📝 Requisitos</h2>
+      <ul>
+        <li>Mayor de 16 años</li>
+        <li>Conocimientos básicos de matemáticas</li>
+        <li>Acceso a computadora o tablet</li>
+      </ul>
+    </section>
+
+    <!-- Información de costos -->
+    <section class="bloque costos">
+      <div class="costos-flex">
+        <div class="texto-costos">
+          <h2>💰 Costos</h2>
+          <p>Total: <strong>$2,000 m.n.</strong></p>
+          <p>Inscripción: $1,000 m.n. <br> 2do. Pago: $1,000 m.n.</p>
+          <p>10% de descuento por pago único — <strong>$1,800 m.n.</strong></p>
+        </div>
+        <img src="../Img/calcu.jpg" alt="Costos del curso" class="imagen-costos"> <!-- Imagen decorativa de costos -->
+      </div>
+    </section>
+
+    <!-- Botón final para adquirir el curso -->
+    <footer>
+      <a href="../Pages/datosper.html"><button>Adquirir el curso</button></a>
+    </footer>
+  </div>
+
+  <!-- Script para manejar los acordeones de contenido -->
+  <script>
+    document.querySelectorAll('.toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const panel = button.nextElementSibling;
+        const isVisible = panel.style.display === 'block';
+
+        // Cierra todos los paneles
+        document.querySelectorAll('.details').forEach(p => p.style.display = 'none');
+        // Restablece el ícono ⯈
+        document.querySelectorAll('.toggle').forEach(btn => {
+          btn.textContent = btn.textContent.replace('⯆', '⯈');
+        });
+
+        // Si el panel estaba oculto, mostrarlo y cambiar el ícono
+        if (!isVisible) {
+          panel.style.display = 'block';
+          button.textContent = button.textContent.replace('⯈', '⯆');
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

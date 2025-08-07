@@ -1,0 +1,249 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #bdafa0;
+  display: flex;
+  justify-content: center;
+  padding: 40px 10px;
+}
+
+.profile-card {
+  background-color: #fdfcf7;
+  border: 2px solid #3c7c64;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 700px;
+  padding: 25px;
+  box-shadow: 2px 4px 10px rgba(0,0,0,0.08);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #3c7c64;
+}
+
+.header a {
+  text-decoration: none;
+  color: #6a6a6a;
+  font-size: 14px;
+}
+
+.info-principal {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.imagen-curso {
+  width: 200px;       /* antes: 120px */
+  height: 200px;      /* antes: 120px */
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #3c7c64;
+}
+
+
+.texto-principal p {
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+.bloque {
+  background-color: #f2eae0;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border-left: 5px solid #3c7c64;
+}
+
+.bloque h2 {
+  margin-top: 0;
+  font-size: 16px;
+  color: #3c7c64;
+}
+
+.bloque ul {
+  padding-left: 18px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+footer button {
+  background-color: #3c7c64;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+footer button:hover {
+  background-color: #2f5f4d;
+}
+
+/* Acordeón */
+.accordion .toggle {
+  background-color: #bdafa0;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 10px 16px;
+  margin-top: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.accordion .toggle:hover {
+  background-color: #a89c8d;
+}
+
+.details {
+  display: none;
+  background-color: #f6f5f1;
+  padding: 10px 20px;
+  border-left: 3px solid #3c7c64;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.details ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.details li {
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+@media (max-width: 600px) {
+  .info-principal {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imagen-curso {
+    margin-bottom: 10px;
+  }
+
+  .profile-card {
+    padding: 20px;
+  }
+
+  footer button {
+    width: 100%;
+  }
+}
+
+.costos-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.texto-costos {
+  flex: 1 1 300px;
+}
+
+.imagen-costos {
+  flex: 0 0 200px;
+  max-width: 200px;
+  border-radius: 12px;
+  border: 2px solid #3c7c64;
+  object-fit: cover;
+}
+
+/* Botón de regreso arriba a la izquierda */
+.volver-cursos {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+.btn-volver {
+  display: inline-flex;
+  align-items: center;
+  background-color: #3c7c64;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-volver i {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.btn-volver:hover {
+  background-color: #2f5f4d;
+}
+
+/* Imagen ampliada del chef */
+.imagen-curso {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #3c7c64;
+}
+
+/* Imagen alineada a la derecha en la sección de Costos */
+.costos-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.texto-costos {
+  flex: 1 1 300px;
+}
+
+.imagen-costos {
+  flex: 0 0 200px;
+  max-width: 200px;
+  border-radius: 12px;
+  border: 2px solid #3c7c64;
+  object-fit: cover;
+}
+
+.boton-perfil {
+  background-color: #3c7c64;       /* Verde suave */
+  color: white;                    /* Texto blanco */
+  padding: 6px 12px;               /* Espaciado interno */
+  font-size: 14px;                 /* Tamaño del texto */
+  border: none;                    /* Sin borde */
+  border-radius: 6px;              /* Bordes redondeados */
+  margin-left: 10px;              /* Espacio a la izquierda del nombre */
+  cursor: pointer;                /* Cursor en forma de mano */
+  transition: background-color 0.3s ease;
+  text-decoration: none;          /* Quitar subrayado */
+  display: inline-block;
+}
+
+.boton-perfil:hover {
+  background-color: #23473a;      /* Verde más oscuro al pasar el mouse */
+}

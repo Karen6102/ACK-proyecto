@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="../IMG/logo.png" type="image/x-icon">
+    <title>Usuarios y Roles - ACK</title>
+    <link rel="stylesheet" href="../CSS/usuarios.css" />
+</head>
+
+<body>
+    <!-- Inicio del encabezado -->
+    <header>
+        <h1>Gestión de Usuarios</h1>
+    </header>
+    <!-- Fin del encabezado -->
+
+    <!-- Inicio del contenido principal -->
+    <main>
+        <h2>Usuarios Registrados</h2>
+
+        <!-- Inicio de la sección principal de filtrado y tabla -->
+        <main>
+            <label for="rol">Filtrar por rol:</label>
+            <select id="rol">
+                <option value="todos">Todos</option>
+                <option value="Administrador">Administrador</option>
+                <option value="Instructora">Instructora</option>
+                <option value="Estudiante">Estudiante</option>
+            </select>
+
+            <!-- Inicio de la tabla de usuarios -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Usuario</th>
+                        <th>Correo</th>
+                        <th>Rol</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Cada <tr> representa un usuario -->
+                    <tr>
+                        <td>Daniela Romero</td>
+                        <td>dani.rom</td>
+                        <td>daniela@ack.mx</td>
+                        <td>Instructora</td>
+                        <td>Activo</td>
+                        <td>
+                            <button>Editar</button>
+                            <button>Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Luis Méndez</td>
+                        <td>lmendez</td>
+                        <td>luis.m@ack.mx</td>
+                        <td>Administrador</td>
+                        <td>Activo</td>
+                        <td>
+                            <button>Editar</button>
+                            <button>Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Karla Juárez</td>
+                        <td>kjuarez</td>
+                        <td>karla.j@ack.mx</td>
+                        <td>Estudiante</td>
+                        <td>Inactivo</td>
+                        <td>
+                            <button>Editar</button>
+                            <button>Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sergio Aguilar</td>
+                        <td>sergio.a</td>
+                        <td>sergio@ack.mx</td>
+                        <td>Instructora</td>
+                        <td>Activo</td>
+                        <td>
+                            <button>Editar</button>
+                            <button>Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Julia Ortega</td>
+                        <td>jortega</td>
+                        <td>julia.o@ack.mx</td>
+                        <td>Estudiante</td>
+                        <td>Activo</td>
+                        <td>
+                            <button>Editar</button>
+                            <button>Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Arturo Cervantes</td>
+                        <td>acervantes</td>
+                        <td>arturo.c@ack.mx</td>
+                        <td>Administrador</td>
+                        <td>Inactivo</td>
+                        <td>
+                            <button>Editar</button>
+                            <button>Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>María Luna</td>
+                        <td>maria.luna</td>
+                        <td>maria.l@ack.mx</td>
+                        <td>Estudiante</td>
+                        <td>Activo</td>
+                        <td>
+                            <button>Editar</button>
+                            <button>Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Iván Gutiérrez</td>
+                        <td>ivang</td>
+                        <td>ivan.g@ack.mx</td>
+                        <td>Instructora</td>
+                        <td>Activo</td>
+                        <td>
+                            <button>Editar</button>
+                            <button>Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Fin de la tabla de usuarios -->
+
+            <a href="admin.html" class="nav-button volver">← Volver al Panel</a>
+        </main>
+        <!-- Fin de la sección principal de filtrado y tabla -->
+    </main>
+    <!-- Fin del contenido principal -->
+</body>
+
+</html>

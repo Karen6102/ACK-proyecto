@@ -1,0 +1,371 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #d4cabf;
+}
+
+h2 {
+            color: #3a8f70;
+        }
+
+.dashboard {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+}
+
+.dashboard-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.stat {
+    background-color: #fff;
+    padding: 10px;
+    flex: 1;
+    margin: 0 5px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.progress-section .course {
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    background-color: #e0e0e0;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    background-color: #2e6b37;
+    height: 100%;
+}
+
+.logros ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.logros li {
+    margin: 5px 0;
+}
+
+
+/* Ajusta la sidebar y deja espacio para flotar */
+.sidebar {
+    position: relative;
+    z-index: 2;
+    margin-top: -100px; /* Flota hacia arriba sobre la imagen */
+    margin-left: 20px;
+}
+
+/* Tarjeta más grande y con efecto flotante */
+.profile-card {
+    background-color: #fff;
+    padding: 27px;
+    width: 290px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    text-align: center;
+    position: relative;
+}
+
+/* Imagen de perfil más grande */
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-top: -80px;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Estilos de texto */
+.profile-name {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.profile-username {
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.profile-details {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.profile-details a {
+    color: #709077;
+    text-decoration: none;
+}
+
+/* Botón */
+.btn {
+    background-color: #709077;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 230px; /* Ajusta según tu imagen */
+    overflow: hidden;
+}
+
+.header-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 50%, #d4c6b8 100%);
+}
+
+/* Asegura que el main baje después del header */
+.container {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+}
+      
+      /* Tarjeta del perfil */
+.profile-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-top: -70px; /* Empuja hacia arriba para que quede justo debajo del header */
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: -50px;
+    border: 4px solid white;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.profile-username {
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.profile-bio {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.profile-details {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.profile-details a {
+    color: #709077;
+    text-decoration: none;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0;
+    border: none;
+    border-radius: 20px;
+    background-color: #709077;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn.secondary {
+    background-color: #657786;
+}
+
+.calendar-card {
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #4f7c38;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.nav-buttons button {
+    background: #e0e0e0;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.calendar-grid div {
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.calendar-grid .selected {
+    background-color: #e3eae3;
+    color: #2f5e2e;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-footer {
+    display: flex;
+    justify-content: flex-start; /* Cambia de space-between a flex-start */
+    margin-top: 10px;
+}
+
+.calendar-footer img {
+    height: 100px;
+    align-self: center; /* o 'center' si prefieres */
+    margin-left: 0;
+}
+
+.falling-elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.falling-elements img {
+    position: absolute;
+    width: 30px;
+    animation: fall 8s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0.3;
+}
+}
+
+.course-schedule-table {
+    margin-top: 30px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.course-schedule-table h3 {
+    font-size: 22px;
+    margin-bottom: 16px;
+    color: #2E7D32;
+}
+
+.course-schedule-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.course-schedule-table th,
+.course-schedule-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    color: #444;
+}
+
+.course-schedule-table th {
+    background-color: #E8F5E9;
+    color: #1B5E20;
+    font-weight: 600;
+}
+
+.calendar-pie {
+    background-color: #ffffff;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-pie h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #2d6029;
+}
+
+.calendar-pie canvas {
+    max-width: 100%;
+    height: auto;
+}
+

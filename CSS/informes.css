@@ -1,0 +1,114 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #bdafa0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
+    background-color: #3c7c64;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Contenedor principal */
+main.informes {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección de resumen */
+.resumen h2 {
+    font-size: 1.6rem;
+    color: #3c7c64;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.metricas {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cuadro {
+    background-color: #f1ede9;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    flex: 1 1 200px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.cuadro h3 {
+    margin-bottom: 0.5rem;
+    color: #3c7c64;
+}
+
+.cuadro p {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* Sección de descargas */
+.descargas h2 {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    color: #3c7c64;
+    text-align: center;
+}
+
+.descargas ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.descargas li {
+    margin: 0.5rem 0;
+}
+
+.descargas a {
+    color: #3c7c64;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.descargas a:hover {
+    color: #2f5e4c;
+}
+.volver {
+    display: inline-block;
+    margin-bottom: 1rem;
+    background-color: #3c7c64;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.volver:hover {
+    background-color: #2f5e4c;
+}
+
+/* Pie de página */
+footer {
+    background-color: #07110d;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}

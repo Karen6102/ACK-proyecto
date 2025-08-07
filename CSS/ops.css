@@ -1,0 +1,77 @@
+body {
+    background: linear-gradient(to bottom, #ebe5de, #ebe5de);
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #3c7c64;
+}
+
+h3 {
+    color: #3c7c64;
+}
+
+h4 {
+    color: #bdafa0;
+}
+
+h5{
+    color: #89bba7;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(135deg, #3c7c64, #bdafa0);
+    padding: 0rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    font-size: 1.1rem;
+    animation: slide-up 0.5s ease-out;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar a span {
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    transform: scale(1.05);
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
