@@ -67,6 +67,23 @@ header {
     border: 1px solid #ccc;
 }
 
+/* Botón de regreso */
+.cerrar {
+    display: inline-block;
+    margin-top: 2rem;
+    background-color: #3c7c64;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cerrar:hover {
+    background-color: #2f5e4c;
+}
+
 footer {
     text-align: center;
     background-color: #040f0b;

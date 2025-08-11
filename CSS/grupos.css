@@ -67,3 +67,20 @@ body {
 .icono-accion:hover {
     color: #ffffff;
 }
+
+/* Botón de regreso */
+.cerrar {
+    display: inline-block;
+    margin-top: 2rem;
+    background-color: #bdafa0;
+    color: 2f5e4c;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cerrar:hover {
+    background-color: #2f5e4c;
+}
